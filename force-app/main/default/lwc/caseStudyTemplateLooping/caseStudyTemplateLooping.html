@@ -1,0 +1,73 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-23-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="CaseStudyTemplateLooping">
+        <div class = "slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+                <label>Lead Name</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="text" 
+                    value={leadName} 
+                    onchange={handleLeadNameChange}>
+                </lightning-input> 
+            </div>
+        </div>
+        <div class = "slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+                <label>Lead Source</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="text" 
+                    value={leadSource} 
+                    onchange={handleLeadSourceChange}>
+                </lightning-input> 
+            </div>
+        </div>
+        <div class = "slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">   
+            <div class="slds-col slds-size_1-of-2">
+                <label>Annual Revenue</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="number" 
+                    value={annualRevenue} 
+                    onchange={handleAnnualRevenueChange}>
+                </lightning-input> 
+            </div> 
+        </div>
+        <div class = "slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">  
+            <div class="slds-col slds-size_1-of-2">
+                <label>Email</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="email" 
+                    value={email} 
+                    onchange={handleEmailChange}>
+                </lightning-input> 
+            </div>               
+        </div>
+        <div class = "slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center buttons">
+            <lightning-button label="Add" variant="brand" onclick={handleAdd}></lightning-button>
+            <lightning-button label="Clear" variant="brand" onclick={handleClear}></lightning-button>
+            <lightning-button label="Display" variant="brand" onclick={handleDisplay}></lightning-button>
+        </div>
+        <template lwc:if={displayLeads}>
+            <div class = "slds-m-top_medium slds-box">
+                <h3>Saved Leads:</h3>
+                <template for:each={leads} for:item="lead" for:index="index">
+                    <div key={lead.index} class="slds-m-top_small">
+                        <p><b>Lead Name :</b>{lead.leadName}</p>
+                        <p><b>Lead Source :</b>{lead.leadSource}</p>
+                        <p><b>Annual Revenue :</b>{lead.annualRevenue}</p>
+                        <p><b>Email :</b>{lead.email}</p>
+                    </div>
+                </template>
+            </div>
+        </template>        
+    </lightning-card>
+</template>

@@ -1,0 +1,71 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-24-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-box">
+        <div class=" slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+            <lightning-input
+                type="text"
+                label="Player Name"
+                value={name}
+                onchange={handleNameChange}
+            ></lightning-input>
+            </div>
+        </div>
+        <div class="slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+               <lightning-input
+                type="number"
+                label="Score"
+                value={score}
+                onchange={handleScoreChange}
+                ></lightning-input>
+            </div>
+        </div>
+        <div class="slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+            <lightning-input
+                type="text"
+                label="Team"
+                value={team}
+                onchange={handleTeamChange}
+            ></lightning-input>
+            </div>
+        </div>
+        <div class=" slds-box slds-p-around_medium slds-grid slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_auto">
+            <lightning-input
+                type="checkbox"
+                label="AddMore"
+                checked={addMore}
+                onchange={handleAddMoreChange}
+            ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_auto">
+            <lightning-button
+                label="Submit"
+                onclick={handleSubmit}
+                variant="success"
+            ></lightning-button>
+            </div>
+            <div class="slds-col slds-size_auto">
+            <lightning-button
+                label="Top Scorer"
+                onclick={handleTopScorer}
+                variant="brand"
+                disabled={disableButton}
+            ></lightning-button>
+            </div> 
+        </div>
+        <div class=" slds-box slds-align_absolute-center slds-m-top_small">
+            <c-diy-child-player-score top-scorer={topScorerText}></c-diy-child-player-score>
+        </div>
+    </div>
+    </lightning-card>
+</template>

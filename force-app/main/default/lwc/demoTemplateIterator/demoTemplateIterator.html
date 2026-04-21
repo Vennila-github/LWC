@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-20-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Template Iterator">
+        <div class="slds-p-around_medium">
+            <template iterator:it={employeesList}>
+                <div key={it.value.id}>
+                    <!-- if the item is first item -->
+                     <template lwc:if={it.first}>
+                        <div class="first">
+                            <strong>Top 5 Employees</strong> 
+                        </div>
+                     </template>
+                     {it.value.empName}
+                     <!-- if the item is last item -->
+                     <template lwc:if={it.last}>
+                        <div class="last">
+                            <a href = 'https://ajskilldevelopment.com'>AJSkillDevelopment</a> 
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

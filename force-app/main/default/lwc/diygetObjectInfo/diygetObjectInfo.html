@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-03-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="DIY getObjectInfo">
+      <template for:each={objectData} for:item="obj">
+        <div key={obj.childObjectApiName}>
+            {obj.fieldName}
+        </div>
+      </template>
+    </lightning-card>
+</template>

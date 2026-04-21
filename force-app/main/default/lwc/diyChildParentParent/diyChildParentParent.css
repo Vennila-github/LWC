@@ -1,0 +1,5 @@
+.custom{
+    border: 4px solid blue; /* SLDS standard border color */
+    border-radius: 0;
+    background-color: #ffffff;
+}

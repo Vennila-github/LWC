@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-25-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Emo">
+        <div class="slds-box slds-p-around_medium">
+            <lightning-button label="Show Child" variant="brand" onclick={handleClick}></lightning-button>
+            <!-- condition rendering -->
+             <strong>{name}</strong>
+            <template lwc:if={showChild}>
+            <!-- refer the child -->
+             <c-demo-child-to-parent-child onclose = {handleCloseChild}></c-demo-child-to-parent-child>
+             </template>
+        </div>
+    </lightning-card>            
+</template>

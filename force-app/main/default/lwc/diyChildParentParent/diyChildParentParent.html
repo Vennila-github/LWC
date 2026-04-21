@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-26-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="ChildParentDIY-Indian Monuments">
+        <div class="slds-box slds-m-top_medium custom">
+            <lightning-button label="Indian Monuments" variant="success" onclick={handleClick}></lightning-button>
+            <!-- condition rendering -->
+            <template lwc:if={showChild}>
+                <!-- refer the child -->
+                <c-diy-child-parent-child onclose = {handleCloseChild}></c-diy-child-parent-child>
+            </template>
+            <div class="image-names">
+                <template for:each={imageNames} for:item="img">
+                    <p key={img}><strong>{img}</strong></p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>            
+</template>

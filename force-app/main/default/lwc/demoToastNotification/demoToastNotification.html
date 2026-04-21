@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-26-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="ToastDemo">
+        <lightning-button 
+          variant="success"
+          label="Success" 
+          onclick={handleSuccessClick} 
+        ></lightning-button>
+        <lightning-button 
+          variant="destructive"
+          label="Error" 
+          onclick={handleErrorClick} 
+        ></lightning-button>
+        <lightning-button 
+          variant="brand-outline"
+          label="Info" 
+          onclick={handleInfoClick} 
+        ></lightning-button>
+        <lightning-button 
+          variant="brand"
+          label="Warning" 
+          onclick={handleWarnClick} 
+        ></lightning-button>
+    </lightning-card>
+</template>

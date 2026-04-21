@@ -1,0 +1,13 @@
+.timer {
+    background-color: yellow;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+}
+.childTitle{
+    border: 2px solid red; /* thickness + style + color */
+    border-radius: 10px;   /* optional rounded corners */
+    padding: 10px;         /* space inside the box */
+    display: inline-block;
+}

@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-19-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <!-- template looping -->
+    <!-- 1.for:each,2.for:item,3.key -->
+    <lightning-card title="Template Looping">
+        <div class="slds-p-around-medium">
+            <template lwc:if={isArray}>
+            <template for:each={course} for:item="singlecourse">
+                <div key={courseId}>
+                    {singlecourse}
+                </div>
+            </template>
+            </template>
+            <template lwc:else>
+                <b>Empty Array</b>
+            </template>
+            <!-- updating the array dynamically -->
+             <div>
+                <lightning-input label ="Enter course" type="text" onchange={handleCourseChange}>
+
+                </lightning-input>
+             </div>
+             <div>
+                <lightning-button label="Add" onclick={handleClick}>
+
+                </lightning-button>
+             </div>
+        </div>
+    </lightning-card>
+</template>

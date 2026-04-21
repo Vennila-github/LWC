@@ -1,0 +1,7 @@
+.first{
+    border: 2px solid greenyellow;
+    color: blue;
+}
+.last{
+    border: 2px dashed greenyellow;
+}

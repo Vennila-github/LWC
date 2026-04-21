@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-07-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="DemoUpdateRecord">
+        <div class="slds-p-around_medium">
+        <lightning-input 
+            class="validate"
+            name="Name"
+            label="Name"
+            value={name}
+            onchange={handleChange}
+        ></lightning-input>
+        <lightning-input 
+            class="validate"
+            name="AnnualRevenue"
+            label="AnnualRevenue"
+            value={annRev}
+            onchange={handleChange}
+        ></lightning-input>
+        <lightning-input 
+            class="validate"
+            name="Email"
+            label="Email"
+            value={email}
+            onchange={handleChange}
+        ></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" name="update" label="Update Record" onclick={updateRecordHandler}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

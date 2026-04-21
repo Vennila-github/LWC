@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-19-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title = "TemplateLoopingWithObjectArray">
+        <div class = "slds-p-around-medium">
+            <!-- <template for:each={students} for:item="singleStudentObj"> -->
+            <template for:each={students} for:item="singleStudentObj" for:index="currentIndex">
+                <div key={singleStudentObj.currentIndex}>
+                <!-- <div key={singleStudentObj.Rollno}> -->
+                    <div class="slds-box">
+                    {currentIndex}<br>
+                    {singleStudentObj.Name} <br>
+                    {singleStudentObj.Average}
+                     </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

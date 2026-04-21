@@ -1,0 +1,65 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-02-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title = "LightnignRecordEditForm">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id= {recordId}
+                onsubmit={handleSubmit}
+                onsuccess={handleSuccess}
+                onerror={handleError}
+                lwc:ref="myForm"
+            >
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-input-field field-name={fields.LastName} class="LastName"></lightning-input-field>
+                    <lightning-input-field field-name={fields.AccountId} lwc:ref="AccountName"></lightning-input-field>
+                    <lightning-input-field field-name={fields.Title} lwc:ref="Title"></lightning-input-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-input-field field-name={fields.Email}></lightning-input-field>
+                    <lightning-input-field field-name={fields.Birthdate}></lightning-input-field>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-input-field field-name={fields.Description}></lightning-input-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-input type="toggle" label="Show Address" onchange={handleToggleAddress}></lightning-input>
+                </div>
+                <template lwc:if={showAddress}>
+                    <div>
+                        <lightning-output-field field-name={fields.Address}></lightning-output-field>
+                    </div>
+                </template>
+            </div>
+            <div class="slds-align_absolute-center">
+            <lightning-button 
+              variant="brand"
+              label="Save"
+              type="submit" 
+            ></lightning-button>
+            <!-- create a button to clear the form field vlaues -->
+             <lightning-button 
+               variant="neutral"
+               label="Clear"
+               type="reset"               
+               class="slds-var-p-around_medium"
+             ></lightning-button>
+             <!-- create a button to revert to original values -->
+              <lightning-button 
+               variant="neutral"
+               label="Cancel"
+               class="slds-var-p-around_medium"
+               onclick={handleClick}
+                ></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

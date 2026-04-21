@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-22-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="LWC Ref">
+        <div class="slds-var-m-around_meium">
+            <lightning-input label="Name" onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Age" lwc:ref="refAge" type = "number" onchange={handleAgeChange}></lightning-input>
+            <div class="slds-m-around_medium slds-align_absolute-center">
+                <lightning-button label="Check Eligibilit" onclick={handleCheckEligi}></lightning-button>
+            </div>
+            <div class="slds-m-around_medium slds-align_absolute-center">
+                <lightning-button lwc:ref = "refJoinButton" label="JOIN" disabled=true onclick={handleJoinClick}></lightning-button>
+            </div>
+            <div lwc:ref="refEligi"></div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,54 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-02-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="DIY Lightning Rec Edit Form">
+        <div class="slds-m-around-medium">
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                onsubmit={handleSubmit}
+                onsuccess={handleSuccess}
+                onerror={handleError}
+                lwc:ref="myForm"
+            >
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-input-field field-name={fields.FirstName}></lightning-input-field>
+                    <lightning-input-field field-name={fields.LeadSource} lwc:ref="LeadSource"></lightning-input-field>
+                </div>
+                <div class="slds-col">  
+                    <lightning-input-field field-name={fields.LastName}></lightning-input-field>
+                    <lightning-input-field field-name={fields.Phone} lwc:ref="Phone"></lightning-input-field>
+                    <lightning-input-field field-name={fields.Email} lwc:ref="Email"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-align_absolute-center">
+                <lightning-button 
+                    variant="brand"
+                    label="Save"
+                    type="submit" 
+                ></lightning-button>
+                <!-- create a button to clear the form field vlaues -->
+                <lightning-button 
+                    variant="neutral"
+                    label="Clear"
+                    type="reset"               
+                    class="slds-var-p-around_medium"
+                ></lightning-button>
+                <!-- create a button to revert to original values -->
+                <lightning-button 
+                    variant="neutral"
+                    label="Cancel"
+                    class="slds-var-p-around_medium"
+                    onclick={handleClick}
+                ></lightning-button>
+            </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

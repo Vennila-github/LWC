@@ -1,0 +1,6 @@
+.myStyle{
+    --slds-c-button-brand-color-background: red;
+}
+/*:host{
+    --slds-c-button-brand-color-background: red;
+}*/

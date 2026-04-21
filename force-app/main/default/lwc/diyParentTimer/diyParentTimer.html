@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-23-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Timer">
+        <div class="slds-var-m-around_medium">
+        
+            <div class="slds-grid slds-gutters slds-m-bottom_medium">
+            <lightning-button class="slds-col" 
+            label="Start" 
+            variant="success" 
+            onclick={handleStart}></lightning-button>
+            <lightning-button class="slds-col" 
+            label="Stop" 
+            variant="destructive" 
+            onclick={handleStop}></lightning-button>
+            <lightning-button class="slds-col" 
+            label="Reset" 
+            variant="brand"            
+            onclick={handleReset}></lightning-button>
+            <!-- Refer the child progress demo -->
+            <div class="childContainer">
+            <c-diy-child-timer lwc:ref="child"></c-diy-child-timer>
+            </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-17-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Course">
+        <div class = "slds-p-around-medium">
+            <div>Firstname : {firstName}</div> 
+            <div>Lastname : {lastName}</div>
+            <div>FullName : {fullName}</div>
+            <div>Course : {course}</div>
+            <div>NoOfCoursesChosen : {noOfCoursesChosen}</div>
+            <div>Days : {days}</div>
+            <div>SlotAvailable  : {isSlotAvl}</div>
+            <div>QASlot : {qaslot.session}</div>
+        </div>   
+        <div class ="slds-p-around-medium">  
+        <lightning-input type="text" label ="Enter your firstname" onchange={handleChange}>                     
+        </lightning-input>
+        </div>  
+        </lightning-card>
+</template>

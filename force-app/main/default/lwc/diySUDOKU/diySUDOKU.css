@@ -1,0 +1,11 @@
+.square{
+    aspect-ratio: 1 / 1;   /* makes it square */
+    border: 1px solid black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.number{
+    font-size: 40px;
+    font-weight: bold;
+}

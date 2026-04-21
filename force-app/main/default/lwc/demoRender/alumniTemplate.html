@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Alumni">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+              type="text"
+              label="Enter name"
+            ></lightning-input>
+            <lightning-input 
+              type="email"
+              label="Enter email"
+            ></lightning-input>
+            <lightning-input 
+              type="password"
+              label="Enter password"
+            ></lightning-input>
+            <lightning-button 
+              variant="success"
+              label="Login" 
+              onclick={handleAlumniClick} 
+            ></lightning-button>
+            <lightning-button 
+              variant="brand"
+              label="Back" 
+              onclick={handleClick} 
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

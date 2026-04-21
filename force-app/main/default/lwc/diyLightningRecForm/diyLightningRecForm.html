@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-27-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Case Record Form">
+        <div class="slds-p-around_medium">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                fields={fields}
+                onsuccess={handleSuccess}
+                onerror={handleError}
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

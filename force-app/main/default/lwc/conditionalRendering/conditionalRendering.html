@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-17-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="ConditionalRendering">
+        <div class = "slds-p-around-medium">
+            <b>Choose your interest :</b>
+            <div>
+                <lightning-input type="checkbox" label="Shopping" class = "shopCheck" onchange={handleShoppingChange}>
+                </lightning-input>                       
+            </div>
+            <div>
+                <lightning-input type="checkbox" label="Reading" class = "readCheck" onchange={handleReadingChange}>
+                </lightning-input>                       
+            </div>
+        </div>
+        <template lwc:if={isShoppingChosen}>
+            <lightning-card><b>Shopping sites</b></lightning-card>
+            <div class = "slds-p-around-medium slds-box">
+               <ul>
+                    <li><a href ="https://www.amazon.com">🛒 Amazon </a></li>
+                    <li><a href ="https://www.flipkart.com">🛒Flipkart</a></li>
+                    <li><a href ="https://www.temu.com">🛒temu</a></li>
+               </ul>
+            </div>
+        </template>
+        <template lwc:elseif={isReadingChosen}>
+            <lightning-card><b>Reading sites</b></lightning-card>
+            <div class = "slds-p-around-medium slds-box">
+                <ul>
+                    <li><a href = "https://dn790007.ca.archive.org/0/items/atomic-habits-pdfdrive/Atomic%20habits%20%28%20PDFDrive%20%29.pdf">Atomic habits</a></li>
+                    <li><a href = "https://www.slideshare.net/slideshow/the-secret-by-rhonda-byrne-english/251193822">The Secret</a></li>
+                    <li><a href = "https://dn790007.ca.archive.org/0/items/ikigai-the-japanese-secret-to-a-long-and-happy-life-pdfdrive.com/Ikigai%20_%20the%20Japanese%20secret%20to%20a%20long%20and%20happy%20life%20%28%20PDFDrive.com%20%29.pdf">Ikigai</a></li>
+                </ul>
+            </div>
+        </template>
+        <template lwc:else>
+            <lightning-card><b>Nothing is chosen</b></lightning-card>
+        </template>
+    </lightning-card>
+</template>     

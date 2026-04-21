@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-03-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<!-- <template>
+    <lightning-card title="Demo getPicklistValues">
+      <template for:each={pickListValues} for:item="industry" for:index="ind">
+        <div key={industry.ind}>
+            {industry.label}
+        </div>
+      </template>
+    </lightning-card>
+</template> -->
+<template>
+    <lightning-card title="Demo getPicklistValues">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                label="Select Record Type"
+                value={selectedRecordType}
+                options={recordTypeOptions}
+                onchange={handleRecordTypeChange}>
+            </lightning-combobox>
+            <lightning-combobox
+                label="Industry"
+                value={selectedIndustry}
+                options={industryOptions}
+                onchange={handleIndustryChange}               
+            ></lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+.childContainer {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;           /* enable flexbox */
+    justify-content: center;
+}

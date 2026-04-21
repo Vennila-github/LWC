@@ -1,0 +1,10 @@
+.inputRow {
+    display: flex;  
+    justify-content: center;         /* horizontal layout */
+    align-items: center;     /* vertical alignment */
+    gap: 10px;               /* space between label and input */
+    margin-bottom: 10px;     /* spacing from other elements */
+    flex-direction: column;
+    align-items: flex-start;
+}
+

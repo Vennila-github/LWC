@@ -1,0 +1,87 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-19-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="ConditionalRendering">
+        <div class = "slds-p-around-medium">
+            <b>Login Options :</b>
+        </div>
+        <div class="slds-grid slds-gutters slds-p-around-medium">
+        <div class="slds-col">
+            <lightning-input type = "checkbox" 
+                label="Already Member?" 
+                class = "alreadyMemberCheck" 
+                onchange={handleAlreadyMemberChange}>
+            </lightning-input>
+        </div>
+        <div class="slds-col"> 
+            <lightning-input type = "checkbox" 
+                label="New Member?" 
+                class = "newMemberCheck" 
+                onchange={handleNewMemberChange}>
+            </lightning-input>  
+        </div>    
+        </div>
+    </lightning-card>
+    <template lwc:if={isAlreadyMemberChosen}>
+        <lightning-card class = "slds-p-around-medium slds-box">
+            <b>Login Credentials</b>
+            <div>
+                <template lwc:if={loginError}>
+                    <div class="errorMessage">{loginError}</div>
+                </template>
+                <lightning-input type="text" 
+                    label ="Login" 
+                    value = {login}
+                    placeholder="Login"
+                    onchange={handleLoginChange}>
+                </lightning-input>            
+                <lightning-input type="password" 
+                    value= {password}
+                    label ="Password" 
+                    placeholder="Password"
+                    onchange={handlePasswordChange}>
+                </lightning-input>
+                <lightning-button
+                    class="slds-m-top_medium"
+                    label="Login"
+                    variant="brand"
+                    onclick={handleSubmit}>
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template lwc:elseif={isNewMemberChosen}>
+        <lightning-card class = "slds-p-around-medium slds-box">
+            <b>New Member Signin</b>
+            <div>
+                <lightning-input type="text" 
+                    label ="Name" 
+                    placeholder="Name" 
+                    onchange={handleNameChange}>
+                </lightning-input>            
+                <lightning-input type="email" 
+                    label ="Email" 
+                    placeholder="Email" 
+                    onchange={handleEmailChange}
+                    message-when-type-mismatch="Enter a valid email address with @">
+                </lightning-input>
+                <lightning-button
+                    class="slds-m-top_medium"
+                    label="Register"
+                    variant="brand"
+                    onclick={handleRegister}>
+                </lightning-button>
+                <template lwc:if={registerError}>
+                    <div class="errorMessage">
+                        {registerError}
+                    </div>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+</template>

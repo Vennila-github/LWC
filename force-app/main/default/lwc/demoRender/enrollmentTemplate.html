@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Enrollment">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+              type="text"
+              label="Enter name"
+              onchange={handleNameChange}
+            ></lightning-input>
+            <lightning-input 
+              type="email"
+              label="Enter email"
+              onchange={handleEmailChange}
+            ></lightning-input>
+            <lightning-input 
+              type="password"
+              label="Enter password"
+              onchange={handlePasswordChange}
+            ></lightning-input>
+            <lightning-input 
+              type="password"
+              label="Confirm password"
+              onchange={handleconfirmPasswordChange}
+            ></lightning-input>
+            <lightning-button 
+              label="Enroll"
+              onclick={handleEnrollClick}
+              variant="brand"
+            ></lightning-button>
+            <lightning-button 
+              variant="brand"
+              label="Back" 
+              onclick={handleClick} 
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

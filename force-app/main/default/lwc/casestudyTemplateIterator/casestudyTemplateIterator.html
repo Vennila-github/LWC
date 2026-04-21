@@ -1,0 +1,50 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-21-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="CaseStudyTemplateIterator">
+        <div class="slds-box slds-theme_default">
+            <h2 class="slds-m-bottom_medium">
+                <strong>Master LWC with TOP 5 Concepts</strong>
+            </h2>
+            <template iterator:it={list}>
+                <div key={it.value.id}>
+                    <template lwc:if={it.first}>
+                        <div class="slds-grid slds-theme_shade slds-p-around_small slds-m-bottom_small">
+                            <div class="first slds-col slds-size_1-of-2 slds-text-align_left">
+                                <strong>{it.value.Topic}</strong> 
+                            </div>
+                            <div class="first slds-col slds-size_1-of-2 slds-text-align_left">
+                                <strong>{it.value.Concepts}</strong> 
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-grid slds-p-around_small slds-m-bottom_small slds-border_top">
+                            <div class="slds-col slds-size_1-of-2 slds-text-align_left notFirstTopic">
+                                {it.value.Topic}
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-text-align_left notFirstConcept">
+                                <template for:each={it.value.Concepts} for:item="concept">
+                                    <div key={concept}>
+                                        {concept}
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:if={it.last}>
+                        <div class="last slds-text-align_center slds-border_top">
+                            <a href = 'https://ajskilldevelopment.com'>©️Copyrights www.ajskilldevelopment.com</a> 
+                        </div>
+                    </template>
+                    
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

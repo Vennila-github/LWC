@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-31-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="LightningRecordViewForm">
+      <div class="slds-m-around_medium">
+        <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id="006dL00000KTvV1QAL"
+            columns="2"
+        >
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-output-field 
+                    field-name={name}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={amount}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={closeDate}>
+                </lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-output-field 
+                    field-name={expectedRevenue}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={stageName}>
+                </lightning-output-field>
+            </div>
+        </div>        
+        </lightning-record-view-form>
+      </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-22-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Demo Child">
+        <div class="slds-var-m-around_medium">
+            <p>child component </p>
+            <!-- 1. string data below -->
+            <!-- <div>{messageDetails}</div> // this is for string-->
+            <!-- 2.for array data below -->
+            <!-- <template for:each={messageDetails} for:item="course">
+                <div key ={course.id}>
+                    {course}
+                </div>     
+            </template> -->
+            <!-- 3.for object data below -->
+            <!-- <div>{messageDetails.brandname}</div>
+            <div>{messageDetails.model}</div>
+            <div>{messageDetails.year}</div> -->
+            <!-- 4.for object array data below -->
+            <template for:each={messageDetails} for:item="car">
+                <div key ={car.id}>
+                    <div>{car.brandname}</div>
+                    <div>{car.model}</div>
+                    <div>{car.year}</div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

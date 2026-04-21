@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-20-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="ToDoList">
+        <div class="slds-p-around_medium">
+            <!-- template conditionRendering -->
+             <template lwc:if={isTaskListNotEmpty}> 
+            <!-- template looping -->
+            <template for:each={taskList} for:item="task">
+                <div key={task.taskId} class="slds-grid whenTask">
+                    <div class="slds-p-around_medium slds-col">
+                    {task.task}
+                    </div>
+                    <div class="slds-p-around_medium slds-col">
+                    <lightning-button-icon 
+                        name={task.taskId} 
+                        icon-name="utility:delete" 
+                        variant="container" 
+                        onclick={handleDeleteTask}>
+                    </lightning-button-icon>
+                    </div>
+                </div>
+            </template>
+            </template>
+            <template lwc:else>
+                <div class="noTask">
+                    <b>No Task Found</b>
+                </div>
+            </template>
+            <div class="slds-m-around_medium slds-border_top">
+                <lightning-input label="Enter task" value={task} onchange={handleTaskChange}></lightning-input>
+            </div>
+            <div class="slds-p-around_medium">
+                <lightning-button label="Add" variant ="brand" onclick={handleAddClick}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

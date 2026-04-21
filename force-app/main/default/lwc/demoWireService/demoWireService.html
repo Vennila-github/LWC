@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-03-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="WireServiceUsingFunction">
+        <div>
+            Name : {LastName}
+        </div>
+        <div>
+            Email : {Email}
+        </div>
+    </lightning-card>
+    <lightning-card title="WireServiceUsingProperty">
+        <template lwc:if={contactDetailsProperty.data}>
+        <div>
+           {contactDetailsProperty.data.fields.LastName.value}
+        </div>
+        </template>
+    </lightning-card>
+    <lightning-card title="wire service using getFieldValue">
+        Email value getFieldValue : {emailFieldValue}        
+    </lightning-card>
+</template>

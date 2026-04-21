@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-31-2026
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="LightningRecordViewForms">
+      <div class="slds-m-around_medium">
+        <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            columns="3"
+        >
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field 
+                    field-name={name}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={bloodGroup}>
+                </lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field 
+                    field-name={dob}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={phone}>
+                </lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field 
+                    field-name={Email}>
+                </lightning-output-field>
+                <lightning-output-field 
+                    field-name={eligible}>
+                </lightning-output-field>
+            </div>
+        </div>
+        </lightning-record-view-form>
+      </div>
+    </lightning-card>
+</template>
