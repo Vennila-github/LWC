@@ -1,4 +1,4 @@
-:host{
+ :host{ /*pseudo class */
     font-weight: bold;
     text-align: center;
 }
